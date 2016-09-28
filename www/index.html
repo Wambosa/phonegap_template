@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App Title</title>
+
+
+    <!-- BOILERPLATE -->
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!--put content security policy here CORS-->
+
+
+    <!-- CSS + dependencies -->
+    <link href="css/kendo.mobile.all.min.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/kendo.all.min.js"></script>
+
+
+    <!-- CORE PHONEGAP MODULE (note: do not actually put in your project directory!)-->
+    <script src="cordova.js"></script>
+
+
+    <!-- DATABINDING superior with knockout-->
+    <script type="text/javascript" src="js/libs/knockout-3.4.0.js"></script>
+
+    <!-- MY View Models and custom scripts-->
+    <script type="text/javascript" src="js/model/MyViewModel.js"></script>
+
+
+    <!--init-->
+    <script src="js/init/AppShim.js"></script>
+    <script type="text/javascript" src="js/init/DeviceApi.js"></script>
+
+
+
+    <!-- Google Charts (for fun) -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+
+
+
+<!-- SPA (single page application) -->
+<body id="home-page">
+
+    <!--INTRO SCREEN-->
+    <div id="landingPage" data-role="view" data-title="My App Title" data-persist="true" data-use-native-scrolling="true">
+        <h1 class="app-logo">My<br/>App</h1>
+        <div class="action-buttons">
+            <a href="#loginPage" class="transitions-button km-justified km-primary" data-role="button">Login</a>
+        </div>
+
+    </div>
+
+    <!--LOGIN PAGE-->
+    <div id="loginPage" data-role="view" data-title="My App Title" data-transition="overlay:up" data-persist="true" data-use-native-scrolling="true">
+        <ul data-role="listview" data-style="inset">
+            <li><label for="username">Username: <input type="text" id="username" data-bind="value: username"/></label></li>
+            <li><label for="password">Password: <input type="password" id="password" data-bind="value: password"/></label></li>
+        </ul>
+
+        <div class="action-buttons">
+            <a href="#view-transitions-welcome" data-transition="overlay:down reverse" data-role="button" class="km-primary km-justified transitions-button">Login</a><br />
+            <a href="#landingPage" data-transition="overlay:up reverse" data-role="button" class="km-justified transitions-cancel">Cancel</a>
+        </div>
+    </div>
+
+    <!--GRAPH APP-->
+    <div data-role="view" data-title="Welcome" id="view-transitions-welcome" data-persist="true" data-use-native-scrolling="true">
+
+        <!--Play here-->
+
+
+        <!--Div that will hold the pie chart-->
+        <div id="chart_div" style="width:300; height:300"></div>
+
+        <h4 data-bind="text: selectedChartValue"></h4>
+
+
+        <div class="action-buttons">
+            <a data-role="button" class="transitions-button km-justified" href="#landingPage" data-transition="slide:right" >Sign out</a>
+        </div>
+
+        <!--Stop Playing-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--MAIN RUN-->
+    <script type="text/javascript" src="js/init/MainRun.js"></script>
+</body>
+</html>

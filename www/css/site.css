@@ -1,0 +1,17 @@
+
+h1.app-logo {
+    margin: 3em 0;
+    font-size: 3em;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: .9em;
+}
+
+.action-buttons {
+    margin: 1em;
+}
+
+#loginpage .km-back {
+    display: none;
+}
