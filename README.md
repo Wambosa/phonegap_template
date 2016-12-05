@@ -1,20 +1,21 @@
 # phonegap_template
-An easy starting point for phonegap development. Albeit an older version.
+An easy starting point tutorial for phonegap development.
 
 The config.xml drives **most** of the app configuration.
-I have hardcoded version **5.2.0**
+Phonegap CLI stable version **6.3.0** is used
 
 ``` xml
-<preference name="phonegap-version" value="cli-5.2.0" />
+<preference name="phonegap-version" value="cli-6.3.0" />
 ```
 
 ## Testing App Quickly
 1. ```npm install phonegap -g```
 2. use **CLI** navigate to app directory (where ```config.xml``` resides)
 3. ```phonegap serve --no-browser```
-4. use chrome browser to navigate to the default localhost:3000
+4. use chrome browser to navigate to the default http://localhost:3000
 5. open up a the dev tools ```F12``` (_undock_ window pane for sanity)
 6. Toggle _device toolbar_ (in the top left corner of dev tools. looks like a phone and a tablet icon)
+![](http://shondiaz.com/host/dev-tool-icon.png)
 
 
 ## Building App to Device
