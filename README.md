@@ -127,8 +127,7 @@ The steps below can be done on any machine with **openssl**_
  
 
 ### future
-- elaborate on provisioning profile instructions
-- explain how to make a legit signed apk or ipa
+- explain how to make a legit signed apk
 - potentially include file access code examples
 - potentially include network code examples
 - potentially include camera access examples
